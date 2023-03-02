@@ -1,7 +1,8 @@
 import React from "react";
-import './styles.css'
+import './navbar.css';
+import CardWidget from "../CardWidget";
 
-const Navbar= ()=>{
+const NavBar= ()=>{
     return(
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
@@ -21,11 +22,11 @@ const Navbar= ()=>{
               <a className="nav-link" href="#">Nosotros</a>
             </li>
           </ul>
-          <span class="navbar-text" ><img src="https://t3.ftcdn.net/jpg/00/73/10/64/240_F_73106428_Q91LNUigg4ZRIi1ItxIcgEzyW8C9yluE.jpg" />113</span>                  
+          <span class="navbar-text" ><CardWidget/></span>                  
         </div>
       </div>
     </nav>
     )
 }
 
-export default Navbar
+export default NavBar
