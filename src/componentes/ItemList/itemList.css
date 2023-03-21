@@ -1,0 +1,9 @@
+ul.products-list{
+    display: flex;
+    gap: 1.5rem;
+}
+
+div.products-container{
+    padding: 3rem;
+}
+
