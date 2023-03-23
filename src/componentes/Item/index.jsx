@@ -1,5 +1,6 @@
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
+import "./item.css"
 
 function Item({ product }) {
   return (
@@ -11,7 +12,9 @@ function Item({ product }) {
         <Card.Text>$ {product.price}</Card.Text>
         <Card.Text>Unidades Disponibles: {product.stock}</Card.Text>
 
-        <Button variant="primary">Add to cart</Button>
+        <Button className="botonCard" variant="primary">
+          Ver detalle</Button>
+        <Button className="botonCard" variant="secondary">Add to cart</Button>
       </Card.Body>
     </Card>
   );

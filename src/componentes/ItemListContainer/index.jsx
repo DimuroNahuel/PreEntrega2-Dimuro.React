@@ -2,19 +2,19 @@ import { useEffect, useState } from "react";
 import Products from "../../mocks/products";
 import ItemList from "../ItemList";
 
-function ItemListContainer({ categoryId, isCategoryRoute }) {
+function ItemListContainer({ catId, esRuta }) {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
     const productsPromise = new Promise((resolve, reject) =>
-      setTimeout(() => resolve(Products), 1500)
+      setTimeout(() => resolve(Products), 2000)
     );
 
     productsPromise
       .then((response) => {
-        if (isCategoryRoute) {
+        if (esRuta) {
           const productsFiltered = response.filter(
-            (product) => product.category === categoryId
+            (product) => product.category === catId
           );
           setProducts(productsFiltered);
         } else {
@@ -22,7 +22,7 @@ function ItemListContainer({ categoryId, isCategoryRoute }) {
         }
       })
       .catch((err) => console.log(err));
-  }, [categoryId]);
+  }, [catId]);
 
   return (
     <div>

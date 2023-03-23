@@ -5,7 +5,7 @@ import short from "../assets/images/short.jpg";
 
 export default [
   {
-      id: "1",
+      id: 1,
       name: "camisa",
       category: "camisaCat",
       description: "camisa description",
@@ -14,7 +14,7 @@ export default [
       image: camisa,
     },
     {
-      id: "3",
+      id: 3,
       name: "campera",
       category: "camperaCat",
       description: "campera description",
@@ -23,7 +23,7 @@ export default [
       image: campera,
     },
     {
-      id: "2",
+      id: 2,
       name: "short",
       category: "shortCat",
       description: "short description",
