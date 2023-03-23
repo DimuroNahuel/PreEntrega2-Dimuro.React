@@ -1,6 +1,7 @@
+
+import { useParams } from "react-router-dom";
 import NavBar from "../componentes/NavBar";
 import ItemDetailContainer from "../componentes/ItemDetailContainer";
-import { useParams } from "react-router-dom";
 
 
 function ItemRoot() {
