@@ -11,7 +11,7 @@ function Root() {
       <NavBar />
       <ItemListContainer categoryExists={categoryExists} category={params.id} />
     </div>
-  )
+  );
 }
 
 export default Root;
