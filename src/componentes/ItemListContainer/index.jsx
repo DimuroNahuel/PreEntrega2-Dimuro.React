@@ -2,19 +2,17 @@ import { useEffect, useState } from "react";
 import Products from "../../mocks/products";
 import ItemList from "../ItemList";
 
-function ItemListContainer({ catId, esRuta }) {
+function ItemListContainer({ category, categoryExists }) {
   const [products, setProducts] = useState([]);
-
   useEffect(() => {
     const productsPromise = new Promise((resolve, reject) =>
       setTimeout(() => resolve(Products), 2000)
     );
-
     productsPromise
       .then((response) => {
-        if (esRuta) {
+        if (categoryExists) {
           const productsFiltered = response.filter(
-            (product) => product.category === catId
+            (product) => product.category === category
           );
           setProducts(productsFiltered);
         } else {
@@ -22,7 +20,7 @@ function ItemListContainer({ catId, esRuta }) {
         }
       })
       .catch((err) => console.log(err));
-  }, [catId]);
+  }, [category]);
 
   return (
     <div>
