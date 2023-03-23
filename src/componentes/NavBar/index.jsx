@@ -4,7 +4,6 @@ import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 
 import React from "react";
 import './navbar.css';
@@ -16,8 +15,10 @@ function NavBar() {
     return(
     <Navbar bg="light" expand="lg">
       <Container fluid>
-      <Button variant="outline-success">
-        <Navbar.Brand href='/'>Dimuro Market</Navbar.Brand>
+      <Button variant="light">
+        <Navbar.Brand>
+        <NavLink className="link" to={"/"}>DIMURO MARKET</NavLink>
+        </Navbar.Brand>
         </Button>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
@@ -25,27 +26,27 @@ function NavBar() {
             className="me-auto my-2 my-lg-0"
             style={{ maxHeight: '100px' }}
             navbarScroll>
-          <Button variant="outline-success">
+          <Button variant="light">
             <Nav.Link>
-              <NavLink to={"/category/camisaCat"}>Camisas</NavLink>
+              <NavLink className="link"to={"/category/camisaCat"}>Camisas</NavLink>
               </Nav.Link>
               </Button>
 
-              <Button variant="outline-success">
+              <Button variant="light">
             <Nav.Link>
-              <NavLink to={"/category/camperaCat"}>Camperas</NavLink>
+              <NavLink className="link"to={"/category/camperaCat"}>Camperas</NavLink>
               </Nav.Link>
               </Button>
-              <Button variant="outline-success">
+              <Button variant="light">
 
             <Nav.Link>
-              <NavLink to={"/category/shortCat"}>Shorts</NavLink>
+              <NavLink className="link"to={"/category/shortCat"}>Shorts</NavLink>
               </Nav.Link>
               </Button>
   
           </Nav>
           <Form className="d-flex">
-            <Button variant="outline-success"><CardWidget/></Button>
+            <Button variant="light"><CardWidget/></Button>
           </Form>
         </Navbar.Collapse>
       </Container>

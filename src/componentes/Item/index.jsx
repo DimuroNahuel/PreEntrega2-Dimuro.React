@@ -14,7 +14,7 @@ function Item({ product }) {
         <Card.Text>Unidades Disponibles: {product.stock}</Card.Text>
 
         <Button className="botonCard" variant="outline-success">
-          <Link to={`/item/${product.id}`}>Detalles del articulo</Link>
+          <Link className="link"to={`/item/${product.id}`}>Detalles del articulo</Link>
           </Button>
       </Card.Body>
     </Card>
