@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import products from "../../mocks/products";
 
-function ItemDetail({product=products}) {
+function ItemDetail(product) {
 
   const [quantity, setQuantity] = useState(1);
 
@@ -9,12 +8,12 @@ function ItemDetail({product=products}) {
 
     <div className="content">
       <div className="image">
-        <img src={product.image} />
+        <img src={product.imagen} />
       </div>
       <div className="description">
-        <h3 className="title">{product.name} </h3>
+        <h3 className="title">{product.title} </h3>
         <p>{product.description}</p>
-        <p className="price">$ {product.price}</p>
+        <p className="price">$ {product.precio}</p>
         <div className="fotterDesc">
           <button
             className="normalButton"
