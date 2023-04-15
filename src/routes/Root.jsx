@@ -8,7 +8,6 @@ function Root() {
   const categoryExists = Boolean(params.id);
   return (
     <div>
-      <NavBar />
       <ItemListContainer categoryExists={categoryExists} category={params.id} />
     </div>
   );

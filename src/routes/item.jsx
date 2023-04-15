@@ -8,7 +8,6 @@ function ItemRoot() {
 
   return (
     <div>
-      <NavBar />
       <ItemDetailContainer />
       {/* productDetail={id} */}
     </div>

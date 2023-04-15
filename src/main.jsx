@@ -2,21 +2,14 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import Root from './routes/Root.jsx'
 import ItemRoot from './routes/item.jsx';
+import { CustomProvider } from './context/index.jsx';
 
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import {createBrowserRouter,RouterProvider,} from "react-router-dom";
 import './index.css'
 
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import Layout from './componentes/Layout/index.jsx';
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyA5Jn1oR3-EGDzi_fBZcrD3dD6WnxvtVFM",
   authDomain: "fir-1-coderreactjs.firebaseapp.com",
@@ -27,12 +20,14 @@ const firebaseConfig = {
   measurementId: "G-16NJC2CT3K"
 };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+initializeApp(firebaseConfig);
 
 
 const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Layout />,
+    children:[
   {
     path: "/",
     element: <Root />,
@@ -52,13 +47,17 @@ const router = createBrowserRouter([
   {
     path: "/checkout",
     element: <div>Hello world!</div>,
-  },
+  }
+  ],
+}
 ]);
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>,
+    <CustomProvider>
+      <RouterProvider router={router} />
+    </CustomProvider>
+  </React.StrictMode>
 )
 
