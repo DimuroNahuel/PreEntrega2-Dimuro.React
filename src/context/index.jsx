@@ -5,9 +5,9 @@ export function CustomProvider({ children }) {
   const [productsAdded, setProductsAdded] = useState([]);
 
   function onAdd(product, quantity) {
-    const isAlreadyAdded = isInCart(product);
+    const isReadyAdded = isInCart(product);
 
-    if (isAlreadyAdded) {
+    if (isReadyAdded) {
       const productToModify = productsAdded.find(
         (productsAdded) => productsAdded.id === product.id
       );
@@ -29,17 +29,38 @@ export function CustomProvider({ children }) {
     }
   }
 
-  function removeItem(itemId) {}
-  function clear() {}
+  const getQuantity = () => {
+    let cant = 0;
+    productsAdded.forEach((e) => (cant += e.quantity));
+    return cant;
+  };
 
-  function isInCart(product) {
-    return productsAdded.some((productAdded) => productAdded.id === product.id);
+  function removeItem(itemId) {
+    const newProductsAdded = [...productsAdded];
+    const index = newProductsAdded.findIndex(
+      (product) => product.id === itemId
+    );
+    newProductsAdded.splice(index, 1);
+    setProductsAdded(newProductsAdded);
   }
 
-  // Funciones, Cualquier tipo de variable (numeros, objetos, arrays, etc.), Estados de React (useState)
+  function clear() {
+    setProductsAdded([]);
+  }
+
+  function isInCart(product) {
+    return productsAdded.some(
+      (productsAdded) => productsAdded.id === product.id
+    );
+  }
+
   return (
-    <Context.Provider value={{ productsAdded, onAdd }}>
+    <Context.Provider
+      value={{ productsAdded, onAdd, clear, getQuantity, removeItem }}
+    >
       {children}
     </Context.Provider>
   );
 }
+
+export default CustomProvider;

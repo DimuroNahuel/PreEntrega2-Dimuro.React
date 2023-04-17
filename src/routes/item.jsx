@@ -1,6 +1,5 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import NavBar from "../componentes/NavBar";
 import ItemDetailContainer from "../componentes/ItemDetailContainer";
 
 function ItemRoot() {
@@ -9,7 +8,7 @@ function ItemRoot() {
   return (
     <div>
       <ItemDetailContainer />
-      {/* productDetail={id} */}
+
     </div>
   );
 }

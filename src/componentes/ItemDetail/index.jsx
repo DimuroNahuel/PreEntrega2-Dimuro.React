@@ -8,7 +8,7 @@ import { Button } from "react-bootstrap";
 
 function ItemDetail({product}) {
   const {onAdd}=useContext(Context)
-  const [added, setAdded] = useState(1);
+  const [added, setAdded] = useState(0);
 
   function onAddProduct(count){
     setAdded(count)
@@ -23,7 +23,9 @@ function ItemDetail({product}) {
       <div className="description">
         <h3 className="title">{product.title} </h3>
         <p>{product.description}</p>
-        <p className="price">$ {product.price}</p>
+        <p className="price">Precio unitario $ {product.price}</p>
+        <p className="stock">Unidades disponibles {product.stock}</p>
+
         <div className="fotterDesc">
 
         <div>
@@ -33,29 +35,14 @@ function ItemDetail({product}) {
             <div className="ctas-container">
               {added >= 1 && (
                 <Link to="/cart">
-                  <Button>Terminar compra</Button>
+                  <Button  variant="primary">Terminar compra</Button>
                 </Link>
               )}
             </div>
           </div>
 
-          {/* <button
-            className="normalButton"
-            onClick={() => setAdded(added - 1)}
-          >
-            -
-          </button>
-          <p className="added">{added}</p>
-          <button
-            className="normalButton"
-            onClick={() => setAdded(added + 1)}
-          >
-            +
-          </button> */}
         </div>
-        <div className="compra">
-          <button className="normalButton">Añadir al carrito</button>
-        </div>
+      
       </div>
     </div>
   );

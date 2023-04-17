@@ -13,8 +13,8 @@ function Item({ product }) {
         <Card.Text>$ {product.price}</Card.Text>
         <Card.Text>Unidades Disponibles: {product.stock}</Card.Text>
 
-        <Button className="botonCard" variant="outline-success">
-          <Link className="link" to={`/item/${product.id}`}>Detalles del articulo</Link>
+        <Button className="botonCard " variant="primary">
+          <Link className="link text-white" to={`/item/${product.id}`}>Detalles del articulo</Link>
           </Button>
       </Card.Body>
     </Card>

@@ -27,9 +27,7 @@ function ItemDetailContainer(){
 
   return (
     <div>
-      <ItemDetail product={product}
-      // oneProduct 
-      />
+      <ItemDetail product={product}/>
     </div>
   );
 }

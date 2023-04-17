@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import Root from './routes/Root.jsx'
 import ItemRoot from './routes/item.jsx';
 import { CustomProvider } from './context/index.jsx';
+import Cart from './routes/cart.jsx'
 
 import {createBrowserRouter,RouterProvider,} from "react-router-dom";
 import './index.css'
@@ -42,7 +43,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/cart",
-    element: <div>Hello world!</div>,
+    element: <Cart/>,
   },
   {
     path: "/checkout",
