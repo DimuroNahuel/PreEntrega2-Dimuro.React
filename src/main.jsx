@@ -4,6 +4,7 @@ import Root from './routes/Root.jsx'
 import ItemRoot from './routes/item.jsx';
 import { CustomProvider } from './context/index.jsx';
 import Cart from './routes/cart.jsx'
+import ErrorPage from "./routes/error-page";
 
 import {createBrowserRouter,RouterProvider,} from "react-router-dom";
 import './index.css'
@@ -28,6 +29,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
+    errorElement: <ErrorPage />,
     children:[
   {
     path: "/",

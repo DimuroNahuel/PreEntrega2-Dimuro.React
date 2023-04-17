@@ -203,7 +203,7 @@ function Cart() {
               </Button>
             ) : null}
             <Button variant="primary" onClick={clear} style={{ margin: "1em" }}>
-              Vaciar carrito
+              Vaciar carro
             </Button>
           </div>
         </Container>
