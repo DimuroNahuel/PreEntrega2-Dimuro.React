@@ -19,7 +19,7 @@ function ErrorPage() {
           <i>{error.statusText || error.message}</i>
         </p>
         <Link to="/">
-          <Button variant="success" className="mt-3">
+          <Button variant="primary" className="mt-3">
             Ir al inicio
           </Button>
         </Link>

@@ -13,13 +13,12 @@ import { initializeApp } from "firebase/app";
 import Layout from './componentes/Layout/index.jsx';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyA5Jn1oR3-EGDzi_fBZcrD3dD6WnxvtVFM",
-  authDomain: "fir-1-coderreactjs.firebaseapp.com",
-  projectId: "fir-1-coderreactjs",
-  storageBucket: "fir-1-coderreactjs.appspot.com",
-  messagingSenderId: "480534360806",
-  appId: "1:480534360806:web:68d6e35eb8f144f8678127",
-  measurementId: "G-16NJC2CT3K"
+  apiKey: import.meta.env.VITE_apiKey,
+  authDomain: import.meta.env.VITE_authDomain,
+  projectId: import.meta.env.VITE_projectId,
+  storageBucket: import.meta.env.VITE_storageBucket,
+  messagingSenderId: import.meta.env.VITE_messagingSenderId,
+  appId: import.meta.env.VITE_appId,
 };
 
 initializeApp(firebaseConfig);
@@ -29,7 +28,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
-    // errorElement: <ErrorPage />,
+    errorElement: <ErrorPage />,
     children:[
   {
     path: "/",

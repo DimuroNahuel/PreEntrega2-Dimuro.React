@@ -1,44 +1,45 @@
-import { doc, getFirestore, getDoc } from "firebase/firestore";
-import { useEffect, useState } from "react";
 import ItemDetail from "../ItemDetail";
-import { useParams, Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
-import './detail.css'
+import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 
+import { doc, getDoc, getFirestore } from "firebase/firestore";
 
-
-
-function ItemDetailContainer(){
-  const [product,setProduct]=useState(null)
+function ItemDetailContainer({ itemId }) {
+  const [product, setProduct] = useState(null);
   const [productExists, setProductExists] = useState(true);
-
-  const params=useParams()
 
   useEffect(() => {
     const db = getFirestore();
-    const itemRef = doc(db, "Items", params.id);
-
+    const itemRef = doc(db, "Items", itemId);
     getDoc(itemRef)
-    .then((snapshot) => {
+      .then((snapshot) => {
         if (snapshot.exists()) {
-          setProduct({id:snapshot.id, ...snapshot.data()})
+          setProduct({ id: snapshot.id, ...snapshot.data() });
           setProductExists(true);
-        }
-        else {
+        } else {
           setProductExists(false);
         }
       })
       .catch((error) => console.log({ error }));
   }, []);
-  
-  
+
   return (
     <div>
       {productExists ? (
         product ? (
           <ItemDetail product={product} />
         ) : (
-            <span className=" load">Cargando...</span>
+          <div
+            style={{
+              textAlign: "center",
+              fontSize: "3em",
+              fontWeight: "bold",
+              marginTop: "2.5em",
+            }}
+          >
+            <span>Cargando...</span>
+          </div>
         )
       ) : (
         <div
@@ -51,7 +52,7 @@ function ItemDetailContainer(){
             fontFamily: "Comfortaa",
           }}
         >
-          <span>Producto no disponible</span>
+          <span>No contamos con ese producto</span>
           <Link to="/">
             <Button variant="primary" className="mt-3">
               Volver a la tienda
