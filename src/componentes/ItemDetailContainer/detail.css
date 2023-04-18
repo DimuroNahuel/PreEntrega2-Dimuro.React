@@ -1,0 +1,11 @@
+.load{text-align: "center";
+    font-size: "3em";
+    font-weight: "bold";
+    margin-top: "2.5em";}
+
+    .error{display: "grid";
+        text-align: "center";
+        font-size: "3em";
+        font-weight: "bold";
+        margin-top: "2.5em";
+        font-family: "Comfortaa"}
