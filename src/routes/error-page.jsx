@@ -13,7 +13,7 @@ function ErrorPage() {
       <div className="d-flex flex-column align-items-center justify-content-center vh-100">
         <h1 className="text-center display-1">Lo sentimos mucho</h1>
         <h2 className="text-center display-4">
-          Ha ocurrido un error inesperado
+          Ha ocurrido un error 
         </h2>
         <p className="text-center">
           <i>{error.statusText || error.message}</i>

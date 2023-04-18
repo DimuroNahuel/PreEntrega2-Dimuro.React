@@ -39,12 +39,11 @@ function Cart() {
     };
 
     const collectionRef = collection(db, "orders");
-    
     addDoc(collectionRef, order)
       .then(({ id }) => {
         productsAdded.forEach(({ id: productId, stock, quantity }) => {
           const finalStock = stock - quantity;
-          const itemRef = doc(db, "items", productId);
+          const itemRef = doc(db, "Items", productId);
           updateDoc(itemRef, { stock: finalStock });
         });
 
