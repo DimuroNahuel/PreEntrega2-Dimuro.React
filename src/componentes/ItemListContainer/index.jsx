@@ -31,7 +31,7 @@ function ItemListContainer({ category, categoryExists }) {
   }, [category])
 
   return (
-    <div>
+    <div >
       <ItemList products={products} />
     </div>
   );
