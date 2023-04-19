@@ -2,6 +2,7 @@ import ItemDetail from "../ItemDetail";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
+import Spinner from 'react-bootstrap/Spinner';
 
 import { doc, getDoc, getFirestore } from "firebase/firestore";
 
@@ -38,7 +39,9 @@ function ItemDetailContainer({ itemId }) {
               marginTop: "2.5em",
             }}
           >
-            <span>Cargando...</span>
+             <Spinner animation="border" role="status">
+      <span className="visually-hidden">Loading...</span>
+    </Spinner>
           </div>
         )
       ) : (

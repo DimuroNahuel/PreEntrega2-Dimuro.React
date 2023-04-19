@@ -6,7 +6,9 @@ import "./item.css"
 function Item({ product }) {
   return (
     <Card style={{ width: "18rem" }}>
+      <Link to={`/item/${product.id}`}>
       <Card.Img variant="bottom" src={product.image} />
+      </Link>
       <Card.Body>
         <Card.Title>{product.name}</Card.Title>
         <Card.Text>{product.description}</Card.Text>
