@@ -4,8 +4,10 @@ El proyecto presentado es una tienda online para compra de indumentaria masculin
 ## Cómo usar el proyecto:
 
 Para usar el proyecto, primero debes clonar el repositorio en tu máquina local ejecutando el siguiente comando **git clone https://github.com/DimuroNahuel/PreEntrega2-Dimuro.React**. También necesitarás instalar las dependencias del proyecto. Puedes hacerlo usando **npm install**. Una vez que tengas todo configurado, puedes iniciar el servidor de desarrollo usando "npm start".
+Puedes tambien acceder a la tienda en: https://pre-entrega2-dimuro-react-cqqi.vercel.app/
 
-## Libreria adicional utilizada
+
+## Librerias adicionales utilizadas
 Para este proyecto, usamos librerias como react-bootstrap,Sweete Alert,React router, entre otras
 
 ## Estructura del proyecto:
