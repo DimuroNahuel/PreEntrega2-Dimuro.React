@@ -7,10 +7,10 @@ function Item({ product }) {
   return (
     <Card style={{ width: "18rem" }}>
       <Link to={`/item/${product.id}`}>
-      <Card.Img variant="bottom" src={product.image} />
+      <Card.Img className="ImgItem" variant="bottom" src={product.image} />
       </Link>
       <Card.Body>
-        <Card.Title>{product.name}</Card.Title>
+        <Card.Title>{product.title}</Card.Title>
         <Card.Text>{product.description}</Card.Text>
         <Card.Text>$ {product.price}</Card.Text>
         <Card.Text>Unidades Disponibles: {product.stock}</Card.Text>

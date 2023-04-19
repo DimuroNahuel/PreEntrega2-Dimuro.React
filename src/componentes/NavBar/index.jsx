@@ -34,13 +34,13 @@ function NavBar() {
 
               <Button variant="light">
             <Nav.Link>
-              <NavLink className="link"to={"/category/camperaCat"}>Camperas</NavLink>
+              <NavLink className="link"to={"/category/camperaCat"}>Abrigos</NavLink>
               </Nav.Link>
               </Button>
               <Button variant="light">
 
             <Nav.Link>
-              <NavLink className="link"to={"/category/shortCat"}>Shorts</NavLink>
+              <NavLink className="link"to={"/category/shortCat"}>Pantalones</NavLink>
               </Nav.Link>
               </Button>
   

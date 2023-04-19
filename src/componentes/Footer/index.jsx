@@ -20,7 +20,7 @@ function AppFooter() {
               <MDBRow className='d-flex justify-content-center'>
                 <MDBCol size='auto' className='mb-4 mb-md-0'>
                   <p className='pt-2'>
-                    <strong>Suscribete a nuevos ingresos</strong>
+                    <strong>Suscribete para ver las novedades</strong>
                   </p>
                 </MDBCol>
     
