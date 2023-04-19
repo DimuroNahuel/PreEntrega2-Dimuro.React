@@ -11,7 +11,7 @@ function CardWidget() {
   return (
     <button className="cardWidget">
     <Link to="/cart">
-      <img src="https://t3.ftcdn.net/jpg/00/73/10/64/240_F_73106428_Q91LNUigg4ZRIi1ItxIcgEzyW8C9yluE.jpg" className="img-thumbnail" alt="..."/>
+      <img src="https://firebasestorage.googleapis.com/v0/b/fir-1-coderreactjs.appspot.com/o/353439-basket-buy-cart-ecommerce-online-purse-shop-shopping_107515.ico?alt=media&token=446b4528-83c7-49aa-a7fb-a5c8ac6c9fb0" alt="..."/>
       </Link>
       {getQuantity() > 0 ? <i className="CartCant">{getQuantity()}</i> : null}
     </button>
